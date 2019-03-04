@@ -8,6 +8,22 @@
   pointer-events: none;
 }
 
+.tarjeta{
+  text-align: center;
+  padding: 10px;
+  margin: 10px;
+  height: 350px;
+  width: 350px;
+}
+
+.buton{
+  text-align: center;
+  background-color: rgb(29, 182, 29);
+  color: white;
+  height: 30px;
+  width: 70px;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -30,9 +46,4 @@
   to {
     transform: rotate(360deg);
   }
-}
-
-.image{
-  height: 500px;
-  width: 400;
 }
