@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card, Button, CardTitle, CardText, Container, Row, Col,ListGroupItem,ListGroup,CardBody } from 'reactstrap';
-import {productos} from '../data/productos.json'
+import {productos} from '.Juegosp.json'
 import Display from './Display'
 
 class Profile extends React.Component{
@@ -16,7 +16,7 @@ class Profile extends React.Component{
         const productos = this.state.productos.map((productos,i) => {
             return (
               <div className="row mt-4">      
-                <Display precio={productos.precio} description={productos.descripcion} name={productos.name} disponibilidad={productos}></Display>
+                <Display precio={productos.Renta} description={productos.Descripcion} name={productos.Titulo} imagen={productos.Imagen}></Display>
               </div>
             )
           })
