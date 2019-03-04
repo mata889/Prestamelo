@@ -4,6 +4,7 @@ import './App.css';
 /*importando el navbar y lo demas de la parte superior de la pagina*/
 import Header from "./Views/Header";
 import Home from "./Views/Home";
+import Ventas from "./Views/Ventas";
 
 class App extends Component {
   render() {
@@ -14,7 +15,7 @@ class App extends Component {
          <Header />
          <Switch>
            <Route path="/" component={Home} exact/>
-           
+           <Route path="/Ventas" component={Ventas} exact/>
            </Switch>
        </div>
        </BrowserRouter>

@@ -28,7 +28,17 @@ class Ventas extends Component {
                 </div>
             )
         })
-        
+        return(
+            <div className = "Ventas">
+                <h1>A comprar hasta desmañar</h1>
+                <div className = "conteiner">
+                    <div className = "row mt-4">
+                        {JuegosP}
+                    </div>
+                </div>
+            </div>
+            
+        );
     }
 }
 export default Ventas;
