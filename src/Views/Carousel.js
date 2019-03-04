@@ -20,7 +20,7 @@ export default class Carousel extends React.Component {
                     </MDBCarouselItem>
                     <MDBCarouselItem itemId="2">
                       <MDBView>
-                        <img className="d-block w-100" src="https://rukminim1.flixcart.com/flap/960/960/image/ec344dc34a443648.jpg?q=50" alt="Second slide" />
+                        <img className="d-block w-100" src="https://www.newstatesman.com/sites/default/files/styles/lead_image/public/Longreads_2018/09/2018_37_horizon_zero_video_game.jpg?itok=DNchHnRx" alt="Second slide" />
                         <MDBMask overlay="black-strong" />
                       </MDBView>
                       <MDBCarouselCaption>

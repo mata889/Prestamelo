@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card, Button, CardTitle, CardText, Container, Row, Col,ListGroupItem,ListGroup,CardBody } from 'reactstrap';
-import {productos} from '.Juegosp.json'
+import {JuegosP} from './JuegosP.json'
 import Display from './Display'
 
 class Profile extends React.Component{
@@ -8,15 +8,15 @@ class Profile extends React.Component{
     constructor(props){
         super(props)
         this.state = { 
-          productos
+          JuegosP
         }
       }
 
     render(){
-        const productos = this.state.productos.map((productos,i) => {
+        const JuegosP = this.state.JuegosP.map((JuegosP,i) => {
             return (
               <div className="row mt-4">      
-                <Display precio={productos.Renta} description={productos.Descripcion} name={productos.Titulo} imagen={productos.Imagen}></Display>
+                <Display precio={JuegosP.Renta} description={JuegosP.Descripcion} name={JuegosP.Titulo} imagen={JuegosP.Imagen}></Display>
               </div>
             )
           })
@@ -42,7 +42,7 @@ class Profile extends React.Component{
                         </Container>
                     </Col>
                     <Col>
-                        {productos}                
+                        {JuegosP}                
                     </Col>
                 </Row>   
                 </Container>   
