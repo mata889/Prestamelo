@@ -6,6 +6,7 @@ import Header from "./Views/Header";
 import Home from "./Views/Home";
 import Ventas from "./Views/Ventas";
 
+
 class App extends Component {
   render() {
     return (

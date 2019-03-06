@@ -3,6 +3,7 @@ import {Collapse,Navbar,NavbarToggler,NavbarBrand,Nav,NavItem,NavLink} from "rea
 import { Route, Switch, Redirect } from "react-router-dom";
 import Profile from './Profile'
 import Home from './Home'
+import Prueba from "./Prueba"
 
 class Header extends React.Component {
     constructor(props) {
@@ -23,7 +24,7 @@ class Header extends React.Component {
             <div>
                 <Navbar color="Danger" light expand="md">
                     <NavbarBrand style={{ color: "Grey", fontWeight: "bolder", fontSize: "500" }} href="/Home">
-                        PrestamitoTIGO
+                        <img src="https://cdn.dribbble.com/users/84677/screenshots/635390/hand.jpg" width = "50px" height="35px"/>
                         </NavbarBrand>
                     <NavbarToggler onClick={this.toggle} />
                     <Collapse isOpen={this.state.isOpen} navbar>
@@ -48,7 +49,7 @@ class Header extends React.Component {
                 </Navbar>
                 <Switch>
                     <Route path="/Home" component={Home}/> 
-                    <Route path="/login" component=""/>
+                    <Route path="/Login" component={Prueba}/>
                     <Route path="/Products" component=""/>
                     <Route path="/Profile" component={Profile}/>
                     <Route path="/" component=""></Route>
