@@ -2,6 +2,7 @@ import React, { Component } from "react"
 import "../App.css"
 import firebase from "firebase"
 import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth"
+import FileUpload from "./FileUpload"
 
 firebase.initializeApp({
   apiKey: "AIzaSyBTUUUYoUTeuPBuFh6sKq5WVT3UmmNE9bQ",

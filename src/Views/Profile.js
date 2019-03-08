@@ -2,6 +2,7 @@ import React from 'react';
 import { Card, Button, CardTitle, CardText, Container, Row, Col,ListGroupItem,ListGroup,CardBody } from 'reactstrap';
 import {JuegosP} from './JuegosP.json'
 import Display from './Display'
+import firebase from "firebase"
 
 class Profile extends React.Component{
 
@@ -10,7 +11,10 @@ class Profile extends React.Component{
         this.state = { 
           JuegosP
         }
+        
       }
+
+      
 
     render(){
         const JuegosP = this.state.JuegosP.map((JuegosP,i) => {
@@ -20,7 +24,7 @@ class Profile extends React.Component{
               </div>
             )
           })
-
+          
         return (
             <div >
                 <Container>
@@ -29,8 +33,8 @@ class Profile extends React.Component{
                         <Container>
                         <div className="row mt-4">        
                             <Card body>
-                                <CardTitle>My Profile</CardTitle>
-                                <CardText>Me gustan los juegos de carrera :v</CardText>
+                      
+                                
                                 <ListGroup flush>
                                     <ListGroupItem tag="a" href="#" action>Add Product</ListGroupItem>
                                     <ListGroupItem tag="a" href="#" action>Sold Products</ListGroupItem>

@@ -12,7 +12,6 @@ class Display extends React.Component{
             <Col xs="auto">
                 <Card>
                     <CardBody>
-                        <CardImg top width="100%" src={this.props.imagen} alt="Card image cap" ></CardImg>
                         <CardTitle>{this.props.name}</CardTitle>
                         <CardText>{this.props.description}</CardText>
                         <CardText>${this.props.precio}</CardText>
