@@ -4,20 +4,18 @@ import './App.css';
 /*importando el navbar y lo demas de la parte superior de la pagina*/
 import Header from "./Views/Header";
 import Home from "./Views/Home";
-import Ventas from "./Views/Ventas";
 
 
 class App extends Component {
   render() {
     return (
-     <div>
+     <div className="App">
        <BrowserRouter>
        <div>
          <Header />
-         <Switch>
+          <Switch>
            <Route path="/" component={Home} exact/>
-           <Route path="/Ventas" component={Ventas} exact/>
-           </Switch>
+          </Switch>
        </div>
        </BrowserRouter>
      </div>

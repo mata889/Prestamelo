@@ -9,7 +9,7 @@ class Display extends React.Component{
 
     render(){
         return(
-            <Col xs="auto">
+            <Col xs="auto" sm="12">
                 <Card>
                     <CardBody>
                         <CardTitle>{this.props.name}</CardTitle>
