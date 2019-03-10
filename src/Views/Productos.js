@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {JuegosP} from './JuegosP.json';
 import '../App.css';
-import { Card, CardBody, Button, CardTitle, CardText, CardImg, Container, Row, Col } from 'reactstrap';
+import { Card, CardBody, Button, CardTitle, CardText, CardImg, Container} from 'reactstrap';
 
 class Ventas extends Component {
     constructor(){

@@ -2,7 +2,7 @@ import React, { Component } from "react"
 import "../App.css"
 import firebase from "firebase"
 import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth"
-import FileUpload from "./FileUpload"
+
 
 firebase.initializeApp({
   apiKey: "AIzaSyBTUUUYoUTeuPBuFh6sKq5WVT3UmmNE9bQ",
@@ -34,20 +34,23 @@ class Log extends Component {
       <div className="App">
         {this.state.isSignedIn ? (
           <span>
+            <p>hola esta logueado</p>
             <div>Signed In!</div>
             <button onClick={() => firebase.auth().signOut()}>Sign out!</button>
             <h1>Welcome {firebase.auth().currentUser.displayName}</h1>
             <img
-              alt="profile picture"
+              alt="profile"
               src={firebase.auth().currentUser.photoURL}
             />
           </span>
+          
         ) : (
           <StyledFirebaseAuth
             uiConfig={this.uiConfig}
             firebaseAuth={firebase.auth()}
           />
         )}
+        
       </div>
     )
   }

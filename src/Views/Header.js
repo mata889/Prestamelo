@@ -64,8 +64,8 @@ class Header extends React.Component {
         return (
             <div>
                 <Navbar color="light" light expand="md">
-                    <NavbarBrand style={{ color: "Grey", fontWeight: "bolder", fontSize: "500" }} href="/Home">
-                        <img src="https://cdn.dribbble.com/users/84677/screenshots/635390/hand.jpg" width = "50px" height="35px"/>
+                    <NavbarBrand style={{ color: "#FFFFFF", fontWeight: "bolder", fontSize: "500" }} href="/Home">
+                        <img alt="imagen"src={require("./Imagenes/control.png")} width = "60px" height="50px"/>
                         </NavbarBrand>
                     <NavbarToggler onClick={this.toggle} />
                     <Collapse isOpen={this.state.isOpen} navbar>

@@ -1,9 +1,9 @@
 import React from 'react';
-import { Card, Button, CardTitle, CardText, Container, Row, Col,ListGroupItem,ListGroup,CardBody,CardImg } from 'reactstrap';
+import { Card,  CardTitle,  Container, Row, Col,ListGroupItem,ListGroup,CardImg } from 'reactstrap';
 import {JuegosP} from './JuegosP.json'
 import Display from './Display'
 import firebase from 'firebase'
-import { CardImage } from 'mdbreact';
+
 
 class Profile extends React.Component{
     constructor(props){

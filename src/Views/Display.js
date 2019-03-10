@@ -1,11 +1,9 @@
 import React from 'react'
-import { Card, Button, CardTitle, CardText, Container, Row, Col,ListGroupItem,ListGroup,CardBody,CardImg } from 'reactstrap';
+import { Card, Button, CardTitle, CardText, Col,CardBody,} from 'reactstrap';
 
 class Display extends React.Component{
 
-    constructor(props){
-        super(props)
-    }
+   
 
     render(){
         return(

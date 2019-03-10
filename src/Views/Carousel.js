@@ -1,5 +1,5 @@
 import React from 'react'
-import { MDBCarousel, MDBCarouselCaption, MDBCarouselInner, MDBCarouselItem, MDBView, MDBMask, MDBContainer } from
+import { MDBCarousel, MDBCarouselCaption, MDBCarouselInner, MDBCarouselItem, MDBView, MDBMask} from
 "mdbreact";
 /*npm install --save mdbreact*/ 
 
