@@ -1,34 +1,21 @@
 import React from "react";
-import {Collapse,Navbar,NavbarToggler,NavbarBrand,Nav,NavItem,NavLink} from "reactstrap";
+import {Container,Collapse,Navbar,NavbarToggler,NavbarBrand,Nav,NavItem,NavLink,DropdownToggle,DropdownMenu,DropdownItem,UncontrolledDropdown} from "reactstrap";
 import { Route, Switch, Redirect} from "react-router-dom";
-import Profile from './Profile';
 import Home from './Home';
 import Prueba from "./Prueba";
-import Productos from "./Productos";
-import firebase from "firebase"
-/*import Pagina404 from './Pagina404/Pagina404';
-<Route component={Pagina404} />*/
+import Products from "./Products";
+import firebase from 'firebase'
 
-const fakeAuth = {
-    isAuthenticated: true,
-    authenticate() {
-      this.isAuthenticated = true
-      alert('True')
-    },
-    signout() {
-      this.isAuthenticated = false
-    }
-  }
-  
-  const PrivateRoute = ({ component: Component, ...rest}) => (
-    <Route {...rest} render={(props)=>(
-        fakeAuth.isAuthenticated === true ?
-        <Component {...props}></Component>
-        :<Redirect to ='/Login' />
-    )}/>
-  )
+firebase.initializeApp({
+    apiKey: "AIzaSyBTUUUYoUTeuPBuFh6sKq5WVT3UmmNE9bQ",
+    authDomain: "prestamojuegos.firebaseapp.com",
+    storageBucket: "gs://prestamojuegos.appspot.com"
+  })
+
+  var storage = firebase.storage();
 
 class Header extends React.Component {
+
     constructor(props) {
         super(props);
 
@@ -48,53 +35,35 @@ class Header extends React.Component {
             isOpen: !this.state.isOpen
         });
     }
-
-    componentDidMount = () => {
-        firebase.auth().onAuthStateChanged(user => {
-            if(user === true){
-                this.setState({ isSignedIn: !!user }) 
-                fakeAuth.authenticate()
-            }else{
-                this.setState({ isSignedIn: !!user })  
-            }      
-        })
-      }
-    
+  
     render() {
         return (
-            <div>
+            <div>        
                 <Navbar color="light" light expand="md">
-                    <NavbarBrand style={{ color: "#FFFFFF", fontWeight: "bolder", fontSize: "500" }} href="/Home">
-                        <img alt="imagen"src={require("./Imagenes/control.png")} width = "60px" height="50px"/>
-                        </NavbarBrand>
-                    <NavbarToggler onClick={this.toggle} />
-                    <Collapse isOpen={this.state.isOpen} navbar>
-                        <Nav className="ml-auto" navbar>
-                            <NavItem>
-                                <NavLink href="/Home">Home</NavLink>
-                            </NavItem>
-                            <NavItem>   
-                                <NavLink href="">Prueba</NavLink>
-                            </NavItem>
-                            <NavItem>
-                                <NavLink href="/Products">Products</NavLink>
-                            </NavItem>
-                            <NavItem>
-                                <NavLink href="/Login" onClick={this.handleChange}>Log in</NavLink>
-                            </NavItem>
-                            <NavItem>
-                                <NavLink href="/Profile">Profile</NavLink>
-                            </NavItem>
-                        </Nav>
-                    </Collapse>
+                    <Container>
+                        <NavbarBrand href="/Home"><img alt="imagen"src={require("./Imagenes/control.png")} width = "60px" height="50px"/></NavbarBrand>
+                        <NavbarToggler onClick={this.toggle} />
+                        <Collapse isOpen={this.state.isOpen} navbar>
+                            <Nav className="ml-auto" navbar>
+                                <NavItem>   
+                                    <NavLink href="#">Prueba</NavLink>
+                                </NavItem>
+                                <NavItem>
+                                    <NavLink href="/Products">Products</NavLink>
+                                </NavItem>
+                                <NavItem>
+                                    <NavLink href="/Profile" onClick={this.handleChange}>Profile</NavLink>
+                                </NavItem>
+                            </Nav>
+                        </Collapse>
+                    </Container>
                 </Navbar>
+
                 <Switch>
                     <Route path="/Home" component={Home}/> 
                     <Route path="/Login" component={Prueba}/>
-                    <PrivateRoute path="/Products" component={Productos}/>
-                    <PrivateRoute path="/Profile" component={Profile}/>
-                    <Route path="/" component=""></Route>
-                    <Redirect to = "/" component=""></Redirect>
+                    <Route path="/Products" component={Products}/>
+                    <Route path="/Profile" component={Prueba}/>
                 </Switch>
             </div>
         );

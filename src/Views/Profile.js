@@ -1,9 +1,10 @@
 import React from 'react';
-import { Card,  CardTitle,  Container, Row, Col,ListGroupItem,ListGroup,CardImg } from 'reactstrap';
+import { Card,  CardTitle,  Container, Row, Col,ListGroupItem,ListGroup,CardImg,Button } from 'reactstrap';
 import {JuegosP} from './JuegosP.json'
 import Display from './Display'
 import firebase from 'firebase'
-
+import FileUpload from './FileUpload'
+import { Route, Switch, Redirect} from "react-router-dom";
 
 class Profile extends React.Component{
     constructor(props){
@@ -45,10 +46,12 @@ class Profile extends React.Component{
                                 <br></br>
                                 <CardTitle><h3>{this.state.nombre}</h3></CardTitle>
                                 <ListGroup flush>
-                                    <ListGroupItem tag="a" href="#" action>Add Product</ListGroupItem>
+                                    <ListGroupItem tag="a" href="/AddProducts" action>Add Product</ListGroupItem>
                                     <ListGroupItem tag="a" href="#" action>Sold Products</ListGroupItem>
                                     <ListGroupItem tag="a" href="#" action>Products on Sale</ListGroupItem>
+                                    <Button color="light" tag="a" onClick={() => firebase.auth().signOut()} action>Log out</Button>
                                 </ListGroup>
+                                
         
                             </Card>
                         </div>    
@@ -58,7 +61,11 @@ class Profile extends React.Component{
                         {JuegosP}                
                     </Col>
                 </Row>   
-                </Container>   
+              </Container>
+              <FileUpload></FileUpload>
+                <Switch>
+                    <Route path="/AddProducts" component={FileUpload}/> 
+                </Switch>  
             </div>
           );
     }

@@ -37,6 +37,7 @@ class FileUpload extends React.Component{
                 <input type="file" onChange={this.handleUpload}></input>
                 <br></br>
                 <img src={this.state.picture} alt="foto"></img>
+                <h1>HOLA</h1>
             </div>
         )
     }

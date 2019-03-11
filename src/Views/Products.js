@@ -2,12 +2,9 @@ import React, { Component } from "react"
 import "../App.css"
 import firebase from "firebase"
 import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth"
-import Profile from './Profile'
+import Productos from './Productos'
 
-
-
-
-class Log extends Component {
+class Products extends Component {
   state = { isSignedIn: false }
   uiConfig = {
     signInFlow: "popup",
@@ -41,8 +38,7 @@ class Log extends Component {
               src={firebase.auth().currentUser.photoURL}
             />
           </span>*/
-          <Profile></Profile>
-          
+          <Productos></Productos>
           
         ) : (
           <StyledFirebaseAuth
@@ -56,4 +52,4 @@ class Log extends Component {
   }
 }
 
-export default Log
+export default Products

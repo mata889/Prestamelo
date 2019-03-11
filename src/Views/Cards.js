@@ -1,10 +1,12 @@
 import React from 'react';
 import { MDBCard, MDBCardTitle, MDBRow, MDBCol} from 'mdbreact';
+import {Container} from 'reactstrap'
 
 const CardsMenu = () => {
     return (
         <div>
             <br></br>
+            <Container>
             <MDBRow>
                 <MDBCol>
                     <MDBCard className="card-image" style={{
@@ -66,6 +68,7 @@ const CardsMenu = () => {
                     </MDBCard>
                 </MDBCol>
             </MDBRow>
+            </Container>
             <br></br>
             <br></br>
             <br></br>
