@@ -20,7 +20,7 @@ class FileUpload extends React.Component{
     handleUpload = () =>{
         const {image} = this.state;
         console.log(this.state);
-        const uplaodTask = storage.ref('images/${image.name}').put(image);
+        const uplaodTask = storage.ref(`images/${image.name}`).put(image);
         uplaodTask.on('state_changed',
             (snapshot)=>{
                 //progress function
