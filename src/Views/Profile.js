@@ -63,12 +63,16 @@ class Profile extends React.Component{
                 </Row>   
               </Container>
               <FileUpload></FileUpload>
-                <Switch>
-                    <Route path="/AddProducts" component={FileUpload}/> 
-                </Switch>  
+                 
             </div>
           );
     }
 }
 
 export default Profile;
+
+/*Despues de <FileUpload></FileUpload>
+                <Switch>
+                 <Route path="/AddProducts" component={FileUpload}/> 
+                </Switch>
+*/

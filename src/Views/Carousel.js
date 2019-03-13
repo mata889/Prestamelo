@@ -10,7 +10,7 @@ export default class Carousel extends React.Component {
         <MDBCarouselInner>
           <MDBCarouselItem itemId="1">
             <MDBView>
-              <img className="d-block w-100" src="https://s3.amazonaws.com/prod-media.gameinformer.com/styles/full/s3/2018/11/06/6f4a579a/banner.jpg" alt="Mattonit's item" />
+              <img className="d-block w-100" src={require("./Imagenes/2019.webp")} alt="Mattonit's item" />
 
               <MDBMask overlay="black-light" />
             </MDBView>
@@ -20,7 +20,7 @@ export default class Carousel extends React.Component {
           </MDBCarouselItem>
           <MDBCarouselItem itemId="2">
             <MDBView>
-              <img className="d-block w-100" src="https://www.newstatesman.com/sites/default/files/styles/lead_image/public/Longreads_2018/09/2018_37_horizon_zero_video_game.jpg?itok=DNchHnRx" alt="Second slide" />
+              <img className="d-block w-100" src={require("./Imagenes/horizon.webp")} alt="Second slide" />
               <MDBMask overlay="black-strong" />
             </MDBView>
             <MDBCarouselCaption>
@@ -29,7 +29,7 @@ export default class Carousel extends React.Component {
           </MDBCarouselItem>
           <MDBCarouselItem itemId="3">
             <MDBView>
-              <img className="d-block w-100" src="https://cdn.geekaygames.com/media/leimageslider/image/s/u/super-smash-ultimate.jpg" alt="Third slide" />
+              <img className="d-block w-100" src={require("./Imagenes/smash.webp")} alt="Third slide" />
               <MDBMask overlay="black-slight" />
             </MDBView>
             <MDBCarouselCaption>

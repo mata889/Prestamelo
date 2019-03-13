@@ -6,11 +6,7 @@ import Prueba from "./Prueba";
 import Products from "./Products";
 import firebase from 'firebase'
 
-firebase.initializeApp({
-    apiKey: "AIzaSyBTUUUYoUTeuPBuFh6sKq5WVT3UmmNE9bQ",
-    authDomain: "prestamojuegos.firebaseapp.com",
-    storageBucket: "gs://prestamojuegos.appspot.com"
-  })
+
 
   var storage = firebase.storage();
 
