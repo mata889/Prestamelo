@@ -4,7 +4,7 @@ import {JuegosP} from './JuegosP.json'
 import Display from './Display'
 import firebase from 'firebase'
 import FileUpload from './FileUpload'
-import { Route, Switch, Redirect} from "react-router-dom";
+
 
 class Profile extends React.Component{
     constructor(props){

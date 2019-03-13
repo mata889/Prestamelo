@@ -1,6 +1,6 @@
 import React from "react";
-import {Container,Collapse,Navbar,NavbarToggler,NavbarBrand,Nav,NavItem,NavLink,DropdownToggle,DropdownMenu,DropdownItem,UncontrolledDropdown} from "reactstrap";
-import { Route, Switch, Redirect} from "react-router-dom";
+import {Container,Collapse,Navbar,NavbarToggler,NavbarBrand,Nav,NavItem,NavLink} from "reactstrap";
+import { Route, Switch} from "react-router-dom";
 import Home from './Home';
 import Prueba from "./Prueba";
 import Products from "./Products";

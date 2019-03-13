@@ -1,5 +1,5 @@
-import React, {Component} from "react"
-import firebase, { storage } from "../firebase"
+import React from "react"
+import  { storage } from "../firebase"
 
 class FileUpload extends React.Component{
     constructor(props){
