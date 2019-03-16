@@ -7,7 +7,7 @@ import Profile from './Profile'
 
 
 
-class Log extends Component {
+class Prueba extends Component {
   state = { isSignedIn: false }
   uiConfig = {
     signInFlow: "popup",
@@ -56,4 +56,4 @@ class Log extends Component {
   }
 }
 
-export default Log
+export default Prueba

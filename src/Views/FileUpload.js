@@ -1,5 +1,6 @@
 import React from "react"
 import  { storage } from "../firebase"
+import {Button,Input} from 'reactstrap'
 
 class FileUpload extends React.Component{
     constructor(props){
@@ -46,11 +47,9 @@ class FileUpload extends React.Component{
             justificyContent: 'center'
         };
         return(
-            <div style={style}>
-                <input type="file" onChange={this.handleChange}/>
-                <button onClick={this.handleUpload}>Subir</button>
-                <br/>
-                <img src={this.state.url} alt="Prueba" height="300" width="400"/>
+            <div>
+                <Input type="file" onChange={this.handleChange}/>
+                <Button color="link" size ="sm" onClick={this.handleUpload}>Subir</Button>
             </div>
         )
     }
