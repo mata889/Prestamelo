@@ -56,8 +56,7 @@ class Comprados extends React.Component {
             <Col xs="auto" sm="12">
                 <Card>
                     <CardBody>
-                        <CardText><img width="50px" height="50px" src={""}/> Has adquirido el juego {Temp.nom_juego}!</CardText>
-                        
+                        <CardText><img width="50px" height="50px" src={""} alt=""/> Has adquirido el juego {Temp.nom_juego}!</CardText>
                     </CardBody>
                 </Card>
             </Col> 

@@ -7,7 +7,7 @@ import Products from "./Products";
 import firebase from 'firebase'
 
 
-var storage = firebase.storage();
+/*var storage = firebase.storage();*/
 
 class Header extends React.Component {
 

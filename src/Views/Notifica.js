@@ -55,7 +55,7 @@ class Notificacion extends React.Component {
             <Col xs="auto" sm="12">
                 <Card>
                     <CardBody>
-                        <CardText><img width="50px" height="50px" src={Temp.imagen}/> {Temp.nom_cliente} quiere adquirir tu juego {Temp.nom_juego}!</CardText>
+                        <CardText><img alt="" width="50px" height="50px" src={Temp.imagen}/> {Temp.nom_cliente} quiere adquirir tu juego {Temp.nom_juego}!</CardText>
                         
                     </CardBody>
                 </Card>

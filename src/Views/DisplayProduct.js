@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Card, CardBody, Button, CardTitle, CardText, CardImg,Modal, ModalHeader, ModalBody, ModalFooter} from 'reactstrap';
+import { Card, CardBody, Button, CardTitle, CardText, CardImg} from 'reactstrap';
 import firebase from 'firebase'
 
 function getProfilePicUrl (){
