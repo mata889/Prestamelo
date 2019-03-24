@@ -36,7 +36,8 @@ class Profile extends React.Component {
           "descripcion": b,
           "nombre": c,
           "foto": d,
-          "uid": e
+          "uid": e,
+          "id": k
         }
         arreglo.push(arr)
       }
@@ -59,7 +60,7 @@ class Profile extends React.Component {
       return (
         JuegosP.uid === this.state.UID ?
           <div className="row mt-4">
-            <Display precio={JuegosP.precio} description={JuegosP.descripcion} name={JuegosP.nombre} imagen={JuegosP.foto}></Display>
+            <Display precio={JuegosP.precio} description={JuegosP.descripcion} name={JuegosP.nombre} imagen={JuegosP.foto} id={JuegosP.id}></Display>
           </div>
           : ""
       )

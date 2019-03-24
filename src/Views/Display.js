@@ -28,8 +28,6 @@ class Display extends React.Component{
         product.remove()
     }
 
-   
-
     render(){
         return(
             <Col xs="auto" sm="12">
