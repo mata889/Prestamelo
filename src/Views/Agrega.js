@@ -15,7 +15,8 @@ class ModalExample extends React.Component {
       description: "",
       mail: "",
       picture: "",
-      uid: ""
+      uid: "",
+      url:"nada"
     };
 
     this.toggle = this.toggle.bind(this);
@@ -102,7 +103,7 @@ class ModalExample extends React.Component {
 
             <br></br>
             <FileUpload></FileUpload>
-
+            {/*console.log(this.state.url)*/}
           </ModalBody>
           <ModalFooter>
             <Button type="submit" color="success" onClick={this.onSubmit}>Confirmar</Button>{' '}

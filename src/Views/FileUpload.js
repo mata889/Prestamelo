@@ -5,6 +5,7 @@ import { Button, Input, Card,  CardImg } from 'reactstrap'
 
 class FileUpload extends React.Component {
     constructor(props) {
+        super();
         super(props);
         this.state = {
             url: ''
@@ -45,7 +46,11 @@ class FileUpload extends React.Component {
             });
     }
 
-
+    onChangeURL (){
+        this.setState({
+            url:this.url
+        });
+    }
     render() {
         /*const style = {
             height: '100vh',
@@ -57,7 +62,6 @@ class FileUpload extends React.Component {
         return (
             <div>
                 <Input type="file" onChange={this.handleChange} />
-
                 <Button color="link" size="sm" onClick={this.handleUpload}>Subir</Button>
                 <br></br>
                 <Card>
