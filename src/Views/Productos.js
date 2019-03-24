@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import {JuegosP} from './JuegosP.json';
 import '../App.css';
-import { Card, CardBody, Button, CardTitle, CardText, CardImg, Container} from 'reactstrap';
+import {Container} from 'reactstrap';
 import firebase from 'firebase'
+import DisplayProduct from './DisplayProduct'
 
 class Ventas extends Component {
     constructor(){
@@ -26,7 +27,10 @@ class Ventas extends Component {
               "precio": a,
               "descripcion": b,
               "nombre": c,
-              "foto": d   
+              "foto": d,
+              "id": k,
+              "uid_propietario": scores[k].uid,  
+              "propietario": scores[k].correo    
             }   
             arreglo.push(arr)
           }
@@ -47,18 +51,9 @@ class Ventas extends Component {
         const JuegosP = this.state.Temp.map((JuegosP,i) => {
             return(
                 <div className="col-md-4">
-                <div className="card mt-4">
-                <Card >
-                    <CardBody>
-                        <CardImg top height="50%" width="50%" src={JuegosP.Imagen}></CardImg>
-                        <CardTitle>{JuegosP.nombre}</CardTitle>
-                        <CardText>{JuegosP.descripcion}</CardText>
-                        <CardText>{JuegosP.precio}</CardText>
-                        <Button color="success">Get</Button>
-                    </CardBody>
-                </Card>
-                </div>
-                              
+                  <div className="card mt-4">
+                    <DisplayProduct nombre={JuegosP.nombre} descripcion={JuegosP.descripcion} precio={JuegosP.precio} id={JuegosP.id} uid_propietario={JuegosP.uid_propietario} propietario={JuegosP.propietario}></DisplayProduct>
+                  </div>               
                 </div>
             )
         })
@@ -68,13 +63,9 @@ class Ventas extends Component {
                 <div className="row mt-4">
                     {JuegosP}
                 </div>     
-            </Container>
-            
-            
-            
+            </Container>      
         )
-    }
-        
+    }      
 }
 export default Ventas;
 

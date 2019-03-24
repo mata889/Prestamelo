@@ -2,6 +2,8 @@ import React from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter,ListGroup,InputGroup,InputGroupAddon,InputGroupText,Input } from 'reactstrap';
 import firebase from 'firebase'
 import FileUpload from './FileUpload'
+import Notifica from './Notifica'
+import Comprados from './Comprados'
 
 class ModalExample extends React.Component {
   constructor(props) {
@@ -65,18 +67,20 @@ class ModalExample extends React.Component {
     return (
       <div>
         <ListGroup flush>  
-            <Button color="light" onClick={this.toggle}>Add Product</Button>                        
+            <Button color="light" onClick={this.toggle}>Agregar Productos</Button>                        
+            <Notifica></Notifica>
+            <Comprados></Comprados>
             <Button color="light" tag="a" onClick={() => firebase.auth().signOut()} action>Log out</Button>
         </ListGroup>
 
         <form onSubmit={this.onFormSubmit}>
         <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
-          <ModalHeader toggle={this.toggle}>Add Product</ModalHeader>
+          <ModalHeader toggle={this.toggle}>Agregar Productos</ModalHeader>
           <ModalBody>
 
             <InputGroup>
                 <InputGroupAddon addonType="prepend">
-                    <InputGroupText>Name: </InputGroupText>
+                    <InputGroupText>Nombre: </InputGroupText>
                 </InputGroupAddon>
                 <Input onChange={this.handle.bind(this)} name="nombre"/>
             </InputGroup>
@@ -84,7 +88,7 @@ class ModalExample extends React.Component {
             <br></br>
             <InputGroup>
                 <InputGroupAddon addonType="prepend">
-                    <InputGroupText>Description: </InputGroupText>
+                    <InputGroupText>Descripcion: </InputGroupText>
                 </InputGroupAddon>
                 <Input onChange={this.handle2.bind(this)} name="descripcion"/>
             </InputGroup>
@@ -101,8 +105,8 @@ class ModalExample extends React.Component {
 
           </ModalBody>
           <ModalFooter>
-            <Button type="submit" color="success" onClick={this.onSubmit}>Confirm</Button>{' '}
-            <Button color="danger" onClick={this.toggle}>Cancel</Button>
+            <Button type="submit" color="success" onClick={this.onSubmit}>Confirmar</Button>{' '}
+            <Button color="danger" onClick={this.toggle}>Cancelar</Button>
           </ModalFooter>
         </Modal>
         </form>

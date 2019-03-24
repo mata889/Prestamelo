@@ -77,13 +77,10 @@ class Header extends React.Component {
                         <Collapse isOpen={this.state.isOpen} navbar>
                             <Nav className="ml-auto" navbar>
                                 <NavItem>
-                                    <NavLink href="#">Prueba</NavLink>
+                                    <NavLink href="/Products">Productos</NavLink>
                                 </NavItem>
                                 <NavItem>
-                                    <NavLink href="/Products">Products</NavLink>
-                                </NavItem>
-                                <NavItem>
-                                    <NavLink href="/Profile">Profile</NavLink>
+                                    <NavLink href="/Profile">Perfil</NavLink>
                                 </NavItem>
                                 <form class="form-inline" action="/action_page.php" onSubmit={this.handleSubmit}>
                                     <input class="form-control mr-sm-2" name="search" type="text" placeholder="Search" onChange={this.handleChange} />

@@ -1,9 +1,8 @@
 import React from 'react';
-import { Card,  CardTitle,  Container, Row, Col,ListGroupItem,ListGroup,CardImg,Button } from 'reactstrap';
+import { Card,  CardTitle,  Container, Row, Col,CardImg } from 'reactstrap';
 import {JuegosP} from './JuegosP.json'
 import Display from './Display'
 import firebase from 'firebase'
-import FileUpload from './FileUpload'
 import Agregar from './Agrega'
 
 class Profile extends React.Component{
