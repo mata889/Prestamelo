@@ -9,7 +9,8 @@ import 'firebase/storage';
     storageBucket: "prestamojuegos.appspot.com",
     messagingSenderId: "8718885378"
   };
-  firebase.initializeApp(config);
+  const Firebase = firebase.initializeApp(config);
+  /*firebase.initializeApp(config);*/
 
   const storage = firebase.storage();
 

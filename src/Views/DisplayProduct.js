@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import { Card, CardBody, Button, CardTitle, CardText, CardImg,Modal, ModalHeader, ModalBody, ModalFooter} from 'reactstrap';
 import firebase from 'firebase'
 
+function getProfilePicUrl (){
+    return firebase.auth().currentUser.photoURL || '/images/profile_placeholder.png';
+  }
 class DisplayProduct extends Component {
     constructor(props){
         super(props);
@@ -19,7 +22,7 @@ class DisplayProduct extends Component {
           modal: !prevState.modal
         }));
       }
-
+       
     delete = () => {
         var noti = firebase.database().ref('compra')
         var data = {
@@ -35,6 +38,15 @@ class DisplayProduct extends Component {
         noti.push(data)
         
         var product = firebase.database().ref("productos").child(this.props.id)
+        
+        firebase.firestore().collection('Transaction').add({
+            Comprador: this.state.uid,
+            FotoComprador: getProfilePicUrl(),
+            Vendedor:this.props.uid_propietario,
+            CorreoVendedor:this.props.propietario,
+            Juego: this.props.nombre,
+            Fecha: firebase.firestore.FieldValue.serverTimestamp()
+          })
         product.remove()
         
     }
