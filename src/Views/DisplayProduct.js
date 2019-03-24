@@ -67,7 +67,7 @@ class DisplayProduct extends Component {
                 <CardImg top height="50%" width="50%" src={this.props.imagen}></CardImg>
                 <CardTitle>{this.props.nombre}</CardTitle>
                 <CardText>{this.props.descripcion}</CardText>
-                <CardText>{this.props.precio}</CardText>
+                <CardText>Precio: ${this.props.precio}</CardText>
                 <Button color="success" onClick={this.delete}>Conseguir</Button>
                 <br></br><br></br>
                 <small className="text-muted">{this.props.propietario}</small>

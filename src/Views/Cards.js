@@ -1,6 +1,7 @@
 import React from 'react';
 import { MDBCard, MDBCardTitle, MDBRow, MDBCol} from 'mdbreact';
 import {Container} from 'reactstrap'
+import "../App.css"
 
 const CardsMenu = () => {
     return (
@@ -18,19 +19,12 @@ const CardsMenu = () => {
                                 <MDBCardTitle tag="h3" className="pt-2">
                                     <strong>Compañia hecha por Gamers para Gamers</strong>
                                 </MDBCardTitle>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                    Repellat fugiat, laboriosam, voluptatem, optio vero odio
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                    Repellat fugiat, laboriosam, voluptatem, optio vero odio
-                                    nam sit officia accusamus minus error nisi architecto
-                                    nulla ipsum dignissimos. Odit sed qui, dolorum! Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                    Repellat fugiat, laboriosam, voluptatem, optio vero odio
-                                    nam sit officia accusamus minus error nisi architecto
-                                    nulla ipsum dignissimos. Odit sed qui, dolorum! Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                    Repellat fugiat, laboriosam, voluptatem, optio vero odio
-                                    nam sit officia accusamus minus error nisi architecto
-                                    nulla ipsum dignissimos. Odit sed qui, dolorum!
+                                <p className="pp">
+                                    Aquí en shareplay nos enfocamos en dar una buena experiencia
+                                    a nuestros usuarios, en conectar a la mayor cantidad de personas
+                                    para que encuentren facilmente los productos que están buscando,
+                                    así como brindarles la seguridad de que sus artículos estarán sanos 
+                                    y salvos. 
                                 </p>
 
                             </div>
@@ -46,21 +40,16 @@ const CardsMenu = () => {
                             <div>
 
                                 <MDBCardTitle tag="h3" className="pt-2">
-                                    <strong>Algo de Video</strong>
+                                    <strong>¡Siempre lo mejor!</strong>
                                 </MDBCardTitle>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                        Repellat fugiat, laboriosam, voluptatem, optio vero odio
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                        Repellat fugiat, laboriosam, voluptatem, optio vero odio
-                                        nam sit officia accusamus minus error nisi architecto
-                                        nulla ipsum dignissimos. Odit sed qui, dolorum! Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                        Repellat fugiat, laboriosam, voluptatem, optio vero odio
-                                        nam sit officia accusamus minus error nisi architecto
-                                        nulla ipsum dignissimos. Odit sed qui, dolorum! Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                        Repellat fugiat, laboriosam, voluptatem, optio vero odio
-                                        nam sit officia accusamus minus error nisi architecto
-                                        nulla ipsum dignissimos. Odit sed qui, dolorum!
+                                <p className="pp">
+                                    Aspiramos a ser la mejor empresa de intercambio y compra
+                                    de videojuegos en la región y ser la primera opción de la 
+                                    mayoría de personas que comparten el amor por los videojuegos
+                                    <br></br>
+                                    <br></br>
+                                    <br></br>
+                                    <br></br>
                                  </p>
                                 
                             </div>
