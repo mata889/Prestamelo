@@ -55,7 +55,7 @@ class Ventas extends Component {
       return (
         <div className="col-md-4">
           <div className="card mt-4">
-            <DisplayProduct nombre={JuegosP.nombre} descripcion={JuegosP.descripcion} precio={JuegosP.precio} id={JuegosP.id} uid_propietario={JuegosP.uid_propietario} propietario={JuegosP.propietario}></DisplayProduct>
+            <DisplayProduct nombre={JuegosP.nombre} descripcion={JuegosP.descripcion} precio={JuegosP.precio} id={JuegosP.id} uid_propietario={JuegosP.uid_propietario} propietario={JuegosP.propietario} foto={JuegosP.foto}></DisplayProduct>
           </div>
         </div>
       )

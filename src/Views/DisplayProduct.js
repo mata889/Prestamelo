@@ -64,7 +64,7 @@ class DisplayProduct extends Component {
        return (
         <Card >
             <CardBody>
-                <CardImg top height="50%" width="50%" src={this.props.imagen}></CardImg>
+                <CardImg top height="50%" width="50%" src={this.props.foto}></CardImg>
                 <CardTitle>{this.props.nombre}</CardTitle>
                 <CardText>{this.props.descripcion}</CardText>
                 <CardText>Precio: ${this.props.precio}</CardText>
